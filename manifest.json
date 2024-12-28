@@ -1,0 +1,22 @@
+{
+  "name": "PrecisionConf Extension with RealTime or Static Date",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "Allows user to set 'fake today' as real system date or a specific date, then removes items if date is in the past.",
+  "permissions": [
+    "storage",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://new.precisionconference.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://new.precisionconference.com/submissions*"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
