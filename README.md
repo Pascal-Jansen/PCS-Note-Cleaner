@@ -1,7 +1,11 @@
 # PCS-Note-Cleaner
 
 A Chrome extension that scans the *PrecisionConference* ([PCS](https://new.precisionconference.com/submissions)) submission page and removes any table cells containing a *Required by* note if that date is already in the past.
-You can choose whether to use your real system date or a static date (e.g., a year in the past), which is useful for testing or simulating conditions.
+You can choose whether to use your actual system date or a static date (e.g., a year in the past), which is helpful for testing or simulating conditions. See an example note removal below:
+
+<p align="center">
+  <img src="pcs-cleaner-example.png" alt="Extension Popup" />
+</p>
 
 ## Installation
 1. Clone or download this repository to your local machine.
@@ -11,7 +15,7 @@ You can choose whether to use your real system date or a static date (e.g., a ye
 	- Browse to the folder you just cloned (the folder containing manifest.json, popup.html, popup.js, content.js, etc.).
 	- Select it.
 4. Confirm the extension is now visible in your list of installed extensions.
-	- You can also pin the extension icon to Chrome’s toolbar if desired.
+	- You can pin the extension icon to Chrome’s toolbar if desired.
 
 ## Usage
 1. Open the extension popup (click its icon in the top-right of Chrome). You’ll see a small UI:
@@ -28,9 +32,9 @@ You can choose whether to use your real system date or a static date (e.g., a ye
 
 ## Notes
 - Date Parsing:
-	- The extension looks for the pattern "Required by `<date>`:" using a simple regex. If the text or format changes, or the date can’t be parsed by JavaScript, the extension may skip it.
+	- The extension looks for the pattern "Required by `<date>`:" using a simple regex. If JavaScript can’t parse the text or format changes or the date, the extension may skip it.
 - Non-Permanent:
-	- We only remove the `<li>` client-side. This is purely a visual removal on your local machine, not on the server.
+	- We only remove the `<li>` client-side. This is a visual removal on your local machine, not the server.
 - Dynamic Injection:
 	- The script runs on DOMContentLoaded plus a 2-second fallback. If the site still loads data later than that, you might need additional code (e.g., a MutationObserver) to catch newly inserted `<li>` elements.
 
@@ -40,4 +44,4 @@ Describes the extension (name, version, permissions, content_scripts).
 - `popup.html + popup.js`
 The user interface for setting the mode (“realtime” or “static”) and saving the chosen date to storage.
 - `content.js`
-Injected on <https://new.precisionconference.com/submissions*>. Reads the saved date from storage, scans for *Required by* and removes any `<li>` with a past date.
+Injected on <https://new.precisionconference.com/submissions*>. Reads the saved date from storage, scans for *Required by*, and removes any `<li>` with a past date.
