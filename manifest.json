@@ -1,8 +1,8 @@
 {
-  "name": "PrecisionConf Extension with RealTime or Static Date",
+  "name": "PCS-Note-Cleaner",
   "version": "1.0",
   "manifest_version": 3,
-  "description": "Allows user to set 'fake today' as real system date or a specific date, then removes items if date is in the past.",
+  "description": "Allows to automatically remove note items if a 'Required by' date is in the past.",
   "permissions": [
     "storage",
     "scripting"
