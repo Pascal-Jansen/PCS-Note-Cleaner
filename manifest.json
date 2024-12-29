@@ -7,9 +7,6 @@
     "storage",
     "scripting"
   ],
-  "host_permissions": [
-    "https://new.precisionconference.com/*"
-  ],
   "content_scripts": [
     {
       "matches": ["https://new.precisionconference.com/submissions*"],
