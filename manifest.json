@@ -2,10 +2,9 @@
   "name": "PCS-Note-Cleaner",
   "version": "1.0",
   "manifest_version": 3,
-  "description": "Allows to automatically remove note items if a 'Required by' date is in the past.",
+  "description": "Removes note items if 'Required by' date is in the past on new.precisionconference.com.",
   "permissions": [
-    "storage",
-    "scripting"
+    "storage"
   ],
   "content_scripts": [
     {
