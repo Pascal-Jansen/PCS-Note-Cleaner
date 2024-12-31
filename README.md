@@ -1,6 +1,6 @@
 # PCS-Note-Cleaner
 
-A Chrome extension that scans the *PrecisionConference* ([PCS](https://new.precisionconference.com/submissions)) submission page and removes any table cells containing a *Required by* note if that date is already in the past.
+A [Chrome extension](https://chrome.google.com/webstore/detail/jhklmmedcipakebkiidmmpcfldmeflgg) that scans the *PrecisionConference* ([PCS](https://new.precisionconference.com/submissions)) submission page and removes any table cells containing a *Required by* note if that date is already in the past.
 You can choose whether to use your actual system date or a static date (e.g., a year in the past), which is helpful for testing or simulating conditions. See an example note removal below:
 
 <p align="center">
@@ -8,6 +8,10 @@ You can choose whether to use your actual system date or a static date (e.g., a 
 </p>
 
 ## Installation
+
+You can install it via the [Google Chrome web store](https://chrome.google.com/webstore/detail/jhklmmedcipakebkiidmmpcfldmeflgg). 
+
+-or-
 1. Clone or download this repository to your local machine.
 2. Open Chrome and visit chrome://extensions.
 	- Ensure Developer mode is turned ON (toggle in the top right corner).
